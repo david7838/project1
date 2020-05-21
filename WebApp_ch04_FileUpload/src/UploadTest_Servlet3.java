@@ -55,10 +55,10 @@ public class UploadTest_Servlet3 extends HttpServlet {
 				in.read(buf);
 				in.close();
 				out.println("buffer length: " + buf.length);
-
+				
 				// �B�~���ըq��
 				out.println("<br><img src=\""+req.getContextPath()+saveDirectory+"/"+filename+"\">");
-
+				
 				out.println();
 				out.println("</PRE>");
 			}
