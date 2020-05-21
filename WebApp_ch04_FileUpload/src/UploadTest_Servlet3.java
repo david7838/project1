@@ -8,8 +8,7 @@ import javax.servlet.http.Part;
 
 @WebServlet("/uploadServlet3.do")
 @MultipartConfig(fileSizeThreshold = 1024 * 1024, maxFileSize = 5 * 1024 * 1024, maxRequestSize = 5 * 5 * 1024 * 1024)
-// ��ƾڶq�j��fileSizeThreshold�ȮɡA���e�N�Q�g�J�Ϻ�
-// �W�ǹL�{���L�׬O��Ӥ��W�LmaxFileSize�ȡA�Ϊ̤W�Ǫ��`�q�j��maxRequestSize �ȳ��|�ߥXIllegalStateException ���`
+
 public class UploadTest_Servlet3 extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	String saveDirectory = "/images_uploaded"; // �W���ɮת��ت��a�ؿ�;
@@ -56,10 +55,10 @@ public class UploadTest_Servlet3 extends HttpServlet {
 				in.read(buf);
 				in.close();
 				out.println("buffer length: " + buf.length);
-				
+
 				// �B�~���ըq��
 				out.println("<br><img src=\""+req.getContextPath()+saveDirectory+"/"+filename+"\">");
-				
+
 				out.println();
 				out.println("</PRE>");
 			}
