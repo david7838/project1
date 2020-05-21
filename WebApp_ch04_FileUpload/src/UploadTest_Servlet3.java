@@ -29,7 +29,7 @@ public class UploadTest_Servlet3 extends HttpServlet {
 		if (!fsaveDirectory.exists())
 			 fsaveDirectory.mkdirs(); // �� ContextPath ���U,�۰ʫإߥئa�ؿ�
 
-		Collection<Part> parts = req.getParts(); // Servlet3.0�s�W�FPart�����A���ڭ̤�K���i���ɮפW�ǳB�z
+		Collection<Part> parts = req.getParts(); 
 		out.write("<h2> Total parts : " + parts.size() + "</h2>");
 
 		for (Part part : parts) {
@@ -56,10 +56,10 @@ public class UploadTest_Servlet3 extends HttpServlet {
 				in.read(buf);
 				in.close();
 				out.println("buffer length: " + buf.length);
-				
+
 				// �B�~���ըq��
 				out.println("<br><img src=\""+req.getContextPath()+saveDirectory+"/"+filename+"\">");
-				
+
 				out.println();
 				out.println("</PRE>");
 			}
