@@ -7,14 +7,4 @@
 		super(numberClass, numberFormat, allowEmpty);
 		this.allowEmpty = allowEmpty;
 	}
-	@Override
-	public void setAsText(String text) throws IllegalArgumentException {
-		if(allowEmpty && (text==null || text.length()==0)) {
-			super.setAsText("0");
-		} else {
-			super.setAsText(text);
-		}
-	}
-}
 
-11111111111111111111111111
