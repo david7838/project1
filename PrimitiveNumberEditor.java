@@ -1,10 +1,4 @@
-package controller;
 
-import java.text.NumberFormat;
-
-import org.springframework.beans.propertyeditors.CustomNumberEditor;
-
-public class PrimitiveNumberEditor extends CustomNumberEditor {
 	private final boolean allowEmpty;
 	public PrimitiveNumberEditor(Class<? extends Number> numberClass, boolean allowEmpty) throws IllegalArgumentException {
 		this(numberClass, null, allowEmpty);
