@@ -22,3 +22,5 @@ public class PrimitiveNumberEditor extends CustomNumberEditor {
 		}
 	}
 }
+
+11111111111111111111111111
